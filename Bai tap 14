@@ -1,0 +1,25 @@
+#include<iostream>
+int main() {
+int n=5;
+do{
+std::cout << ++n;
+}while (n < 9);
+std::cout << n;
+}
+
+/*
+Kết thúc vòng lặp và in giá trị cuối cùng của n:
+Khi vòng lặp do-while kết thúc, chương trình sẽ in giá trị cuối cùng của n với std::cout << n;.
+
+Diễn giải từng bước:
+-Lần lặp 1: n = 5, ++n làm n = 6, in 6.
+-Lần lặp 2: n = 6, ++n làm n = 7, in 7.
+-Lần lặp 3: n = 7, ++n làm n = 8, in 8.
+-Lần lặp 4: n = 8, ++n làm n = 9, in 9.
+Khi n = 9, điều kiện (n < 9) sai, vòng lặp kết thúc.
+
+In giá trị cuối cùng của n:
+Sau vòng lặp, chương trình in giá trị cuối cùng của n, là 9.
+
+KẾT QUẢ: 67899
+*/
