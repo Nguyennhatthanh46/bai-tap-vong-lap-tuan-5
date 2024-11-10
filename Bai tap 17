@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+int count = 0;
+for (;;) {
+if (count == 10)
+break;
+cout << ++count;
+}
+return 0;
+}
+
+/* 
+Vì kết quả đúng nên vòng lập sẽ thực hiện cho tới 10.
+Ban đầu count = 0. Sau đó khi nhận được ++count. Cout tăng lên 1 rồi so sánh điều kiện để xuất ra vòng lập.
+Đến khi = 10 thì kết thúc. Xuất ra 10. 
+KẾT QUẢ: 12345678910.
+*/
