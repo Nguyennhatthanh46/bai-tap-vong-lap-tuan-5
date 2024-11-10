@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+int main() {
+    unsigned int i = 10;
+    while(i-- >= 0)
+        cout << i;
+    return 0;
+}
+
+/*
+Trong trường hợp này, biến i được khai báo với kiểu "unsigned int", tức là chỉ nhận giá trị không âm (0 hoặc lớn hơn). 
+Điều này có nghĩa là khi i giảm từ 0 về -1, nó sẽ không giữ giá trị âm mà sẽ quay về một số dương rất lớn (do cách lưu trữ của kiểu unsigned int). 
+Kết quả là vòng lặp while sẽ không bao giờ dừng và chương trình sẽ bị Lặp Vô Hạn.
+*/
+
+
+/*
+Nếu chuyển unsigned int --> int
+#include <iostream>
+using namespace std;
+int main() {
+    int i = 10;
+    while(i-- >= 0)
+        cout << i;
+    return 0;
+}
+
+KẾT QUẢ: 10 9 8 7 6 5 4 3 2 1 0 - 1
+
+Phân tích hoạt động của vòng lặp while (i-- >= 0)
+Khi sử dụng i--, toán tử giảm hậu tố -- sẽ trả về giá trị hiện tại của i rồi sau đó mới giảm i đi 1. 
+Vì vậy, trong mỗi lần kiểm tra điều kiện i-- >= 0, giá trị hiện tại của i được so sánh với 0 trước, và sau đó i mới giảm đi 1.
+
+Khi i giảm đến 0, điều kiện vẫn đúng, và vòng lặp tiếp tục thêm một lần, in ra -1.
+*/
+
+
+/*
+#include <iostream>
+using namespace std;
+int main() {
+    int i = 10;
+    while(--i >= 0)
+        cout << i;
+    return 0;
+}
+
+KẾT QUẢ: 9 8 7 6 5 4 3 2 1 0
+
+Khi sử dụng --i, vòng lặp dừng khi i giảm xuống -1, trước khi kiểm tra điều kiện >= 0.
+Không thỏa mãn, nên không in ra giá trị trừ -1.
+*/
