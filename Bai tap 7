@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main () {
+int n=1234;
+int sum=0;
+while(n>0){
+sum +=n%10;
+n=n/10;
+}
+cout << sum;
+}
+
+/*
+Phân tích từng bước chạy của chương trình
+Với n = 1234, chương trình thực hiện các bước như sau:
+
+n = 1234
+sum = 0
+n % 10 = 4 → sum = 0 + 4 = 4
+n = 1234 / 10 = 123
+
+Tiếp tục đến khi:
+n = 1 / 10 = 0
+Kết thúc vòng lặp: n = 0, điều kiện n > 0 là sai, vòng lặp kết thúc.
+KẾT QUẢ: 10.
+*/
