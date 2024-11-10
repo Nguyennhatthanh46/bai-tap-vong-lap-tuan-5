@@ -1,0 +1,15 @@
+#include <iostream> 
+using namespace std;
+int main()
+{
+int i, j;
+for (i=1; i<4; i++)
+j = i;           //hang 1
+cout <<"   "<< j;  //hang 2
+return 0;
+}
+
+/* 
+Vòng lập theo i rồi gán giá trị cho j. Theo đó, i sẽ lập đến khi bằng 3 rồi gán cho j ở hàng thứ 1. 
+Sau đó xuất kết quả cuối rồi gán cho j sau khi kết thúc vòng lập. 
+*/
