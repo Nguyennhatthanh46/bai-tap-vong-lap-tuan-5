@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+for (int i = 0; i < 10; ++i) {
+cout << ".";
+if (i > 5) continue;
+cout << i;
+}
+return 0;
+}
+
+
+/*
+Ở mỗi lần lặp:
+1.Chương trình in ra ký tự dấu chấm (.).
+2.Sau đó, chương trình kiểm tra điều kiện if (i > 5):
+-Nếu i > 5, câu lệnh continue được thực thi, làm cho vòng lặp bỏ qua các câu lệnh sau continue và chuyển sang lần lặp tiếp theo.
+-Nếu i <= 5, câu lệnh cout << i; sẽ được thực thi và giá trị của i sẽ được in ra.
+
+Diễn giải theo từng giá trị của i
+-Khi i = 0 đến 5: Chương trình in dấu chấm (.) và giá trị của i.
+-Khi i = 6 đến 9: Chương trình chỉ in dấu chấm (.), vì điều kiện if (i > 5) đúng, dẫn đến continue và bỏ qua lệnh cout << i;.
+
+KẾT QUẢ: .0.1.2.3.4.5....
+*/
