@@ -1,0 +1,39 @@
+#include <iostream> 
+using namespace std;
+int main()
+{
+int sum = 0;
+int item = 0;
+do
+{
+item++;
+sum += item;
+if (sum > 4) break;
+} while (item < 5);
+cout << "sum = "<<sum;
+return 0;
+}
+
+/*
+
+1. Thực hiện trong vòng lặp
+-item++: Tăng giá trị của item lên 1.
+-sum += item;: Cộng giá trị của item vào sum.
+-if (sum > 4) break;: Kiểm tra nếu sum lớn hơn 4. Nếu điều kiện đúng, break sẽ dừng vòng lặp ngay lập tức.
+
+2.Lần lặp đầu tiên
+-item++ làm item = 1.
+-sum += item (tức là sum = sum + item): sum = 0 + 1 = 1.
+-Kiểm tra if (sum > 4): sum = 1, không lớn hơn 4, vòng lặp tiếp tục.
+
+3.Lần lặp thứ hai
+-item++ làm item = 2.
+-sum += item: sum = 1 + 2 = 3.
+-Kiểm tra if (sum > 4): sum = 3, không lớn hơn 4, vòng lặp tiếp tục.
+
+4.Lần lặp thứ ba
+-item++ làm item = 3.
+-sum += item: sum = 3 + 3 = 6.
+-Kiểm tra if (sum > 4): sum = 6, lớn hơn 4, câu lệnh break thực hiện, vòng lặp dừng ngay lập tức.
+
+KẾT QUẢ: sum = 6.
