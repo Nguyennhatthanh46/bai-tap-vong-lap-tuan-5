@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+int i;
+for (i = 0; i < 10; i++);
+cout << i;
+return 0;
+}
+
+/*
+KẾT QUẢ: 10
+Do chấm ; kết thúc sau vòng lập for() nên lệnh cout chỉ in ra kết quả bên ngoài vòng lập.
+Khi kết thúc vòng lập, i = 9. Sau khi kết thúc vòng lập, i = 10 điều kiện sai nên xuất ra kết quả 10. 
+*/
