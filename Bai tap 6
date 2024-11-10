@@ -1,0 +1,26 @@
+#include <iostream> 
+using namespace std;
+int main()
+{
+int sum = 0;
+int i = 0;
+do
+{
+i++;
+sum += i;
+if (sum = 4) break; } 
+while (i < 5);
+cout << "sum = "<< sum;
+return 0;
+}
+
+/*
+" if (sum = 4) break; "
+Dòng trên không so sánh giá trị của sum với 4, mà thực hiện <gán> giá trị 4 cho sum. 
+Trong C++, biểu thức gán (=) trả về giá trị đã được gán, trong trường hợp này là 4, và trong câu lệnh if, bất kỳ giá trị nào khác 0 đều được coi là true. 
+Nên câu lệnh luôn được thực thi.
+Do đó, câu lệnh break luôn thực hiện ngay khi sum được gán 4. Vòng lập kết thúc.
+KẾT QUẢ: sum = 4
+
+Nếu sửa = ---> == thì kết quả sẽ ra = 10. Vì sum không bao giờ bằng 4. 
+*/
