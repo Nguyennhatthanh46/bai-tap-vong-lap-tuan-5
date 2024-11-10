@@ -1,0 +1,36 @@
+#include <iostream> 
+using namespace std;
+int main()
+{
+int num = 15;
+while (num >= 0)
+{
+if (num%2 == 0)
+break;
+cout << num <<" ";
+num = num - 2;
+}
+cout << endl;
+return 0;
+}
+
+/*
+Phân tích từng bước chạy
+
+1.Khởi tạo chương trình
+Biến num được khởi tạo với giá trị 15.
+
+2.Bắt đầu vòng lặp while
+Điều kiện num >= 0 được kiểm tra. Vì num = 15 (lớn hơn 0), điều kiện đúng, và chương trình đi vào vòng lặp.
+
+3.Lần lặp đầu tiên
+Kiểm tra điều kiện if (num % 2 == 0): 15 % 2 bằng 1 (số lẻ), vì vậy điều kiện sai, và chương trình bỏ qua câu lệnh break.
+In giá trị num: cout << num << " "; in ra 15 .
+Giảm num đi 2: num = num - 2; làm cho num trở thành 13.
+
+4. Tương tự đến khi kết thúc vòng lặp
+Kiểm tra while (num >= 0): num = -1, điều kiện sai, vòng lặp while kết thúc.
+
+KẾT QUẢ CUỐI: 15 13 11 9 7 5 3 1
+
+*/
