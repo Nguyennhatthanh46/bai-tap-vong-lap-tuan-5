@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main() {
+int i = 1;
+do {
+cout << i;
+i++;
+if (i < 15)
+break;
+cout << "in";
+} while (true);
+return 0;
+}
+
+/*
+Chạy vòng lặp:
+
+-Bắt đầu với i = 1, cout << i; in ra 1.
+-i++ làm i tăng lên 2.
+-Sau đó, if (i < 15) là đúng (vì i = 2), do đó break sẽ được thực thi, kết thúc vòng lặp ngay lập tức.
+
+Kết thúc chương trình:
+Vòng lặp kết thúc trước khi đạt đến câu lệnh cout << "in";, vì vậy "in" sẽ không bao giờ được in ra.
+Chương trình in ra duy nhất số 1.
+
+KẾT QUẢ: 1
+*/
